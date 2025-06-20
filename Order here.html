@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ORDER HERE </title>
+    <style>
+        /* Modern, Clean Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-image: url(https://img.freepik.com/free-photo/beautiful-men-fashion-wooden-background_74190-4877.jpg?ga=GA1.1.2059718357.1750186908&semt=ais_hybrid&w=740);
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* Vibrant Header */
+        h1 {
+            background: linear-gradient(135deg, dimgray, darkgrey);
+            color: white;
+
+            padding: 25px;
+            text-align: center;
+            margin: 0;
+            font-size: 2.2em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+
+        /* Section Headers */
+        h2 {
+            color: darkslategray;
+            text-align: center;
+            margin: 40px 0 25px;
+            font-size: 1.8em;
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 100px;
+
+            height: 3px;
+            background: darkslategray;
+            margin: 15px auto;
+        }
+
+        h3 {
+            color: darkslategray;
+            text-align: center;
+            font-size: 1.4em;
+            margin: 30px 0 20px;
+        }
+
+        /* Content Styling */
+        .intro-text, .steps-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            color: darkslategray;
+            font-size: 1.1em;
+            line-height: 1.8;
+
+        }
+
+        /* Order Steps */
+        .order-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+        .step {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            position: relative;
+
+        }
+
+        .step-number {
+            background: #FF6B35;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: -40px auto 15px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Order Form */
+        .order-form {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px 
+
+rgba(0,0,0,0.08);
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #FF6B35;
+            outline: none;
+        }
+
+        .submit-btn {
+            background: gray;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border-radius: 30px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto 0;
+            font-weight: bold;
+
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: blue;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        /* Delivery Options */
+        .delivery-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .option-card {
+
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            width: 250px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .option-icon {
+            font-size: 2.5em;
+            color: gray;
+            margin-bottom: 15px;
+        }
+
+        /* Delivery Areas */
+        .areas-container {
+            background: dimgray;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 12px;
+
+        }
+
+        .areas-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .area-item {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Payment Methods */
+        .payment-methods {
+
+            text-align: center;
+            margin: 40px auto;
+            max-width: 600px;
+        }
+
+        .payment-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .payment-icon {
+            font-size: 2em;
+            color: #555;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            margin: 50px auto;
+
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+                padding: 20px;
+            }
+            
+            .step {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .option-card {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+
+  
+
+.submit.btn {
+    /* BASIC STYLING */
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    
+    /* COLOR & BORDER */
+    background-color: dimgray;  /* Rangi ya machungwa */
+    color: white;
+    border: 2px solid darkgrey;  /* Border yenye rangi nyororo */
+    border-radius: 8px;         /* Kona zilizozungushwa */
+    
+    /* EFFECTS */
+
+    transition: all 0.3s ease;  /* Smooth hover animation */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Kivuli kidogo */
+}
+
+/* HOVER EFFECT (Akielekea kwenye button) */
+.submit.btn:hover {
+    background-color: gray;  /* Rangi inabadilika kidogo */
+    transform: translateY(-2px);  /* Ina-inuka kidogo */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);  /* Kivuli kinaongezeka */
+}
+
+/* ACTIVE EFFECT (Anapobonyeza) */
+.submit.btn:active {
+    transform: translateY(1px);  /* Inashuka kidogo */
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Kivuli kinapungua */
+}
+
+
+
+
+
+
+
+
+
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <h1>Order Now BestPrice collection.</h1>
+    
+    <p class="intro-text">Shop from our site for affordable prices, quality fashion, fast delivery, and easy returns — all in one convenient place!.</p>
+    
+   
+        </div>
+    </div>
+    
+    <h2>Shop Now</h2>
+    <div class="order-form">
+        <h3>Your Request From us:</h3>
+        <form action="pee4.html" method="post">
+            <div class="form-group">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="name" placeholder="Enter name...">
+            </div>
+            <div class="form-group">
+                <label for="number">Phone</label>
+                <input type="text" id="number" name="Phone number" placeholder="+255...">
+            </div>
+            <div class="form-group">
+                <label for="Location">Address</label>
+                <input type="text" id="Location" name="location" placeholder="eg.sinza...">
+            </div>
+            <div class="form-group">
+                <label for="food-type">Clothes type</label>
+                <input type="text" id="type" name="Aina ya chakula" placeholder="eg.tshirt...">
+            </div>
+            <div class="form-group">
+
+                <label for="quantity">Quantity</label>
+                <input type="text" id="quantity" name="idadi" placeholder="eg.10...">
+            </div>
+            <div class="form-group">
+                <label for="notes">Short description</label>
+                <input type="text" id="notes" name="notes" placeholder="eg.size and color...">
+            </div>
+             <button type="submit" class="submit btn">Shop</button>
+        </form>
+    </div>
+    
+   
+       
+    </div>
+    
+
+    
+      
+    </div>
+    
+    <div class="payment-methods">
+        <h2>Payment</h2>
+        <p>can be done by:</p>
+        <div class="payment-icons">
+            <div class="payment-icon">
+                <i class="fas fa-money-bill-wave"></i>
+                <p>Cash on delivery</p>
+            </div>
+            <div class="payment-icon">
+                <i class="fas fa-mobile-alt"></i>
+                <p>Tigo Pesa</p>
+            </div>
+            <div class="payment-icon">
+                <i class="fas fa-mobile-alt"></i>
+                <p>SimBanking</p>
+            </div>
+            <div class="payment-icon">
+
+                <i class="fas fa-mobile-alt"></i>
+                <p>Credit card</p>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    <footer style="background-color:dimgray;color:white;text-align:center;padding:20px 0;">
+        <p><big>&copy;BestPrice collection </big></p>
+        <p>contact us<big>: +225777122393, +255734302325</big></p>
+        <p>   
+            <a href="pee1 "style="color:white; text-decoration: none; margin: 0 10px;">Facebook:@collection.bestprice</a>
+            <a href="pee2 "style="color:white; text-decoration: none; margin: 0 10px;">twitter:@collection.bestprice</a>
+            <a href="pee3 "style="color:white; text-decoration: none; margin: 0 
+
+10px;">collection.bestprice</a>
+        </p>
+    </footer>
+</body>
+</html>

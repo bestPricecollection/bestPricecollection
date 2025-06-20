@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MENU </title>
+    <style>
+        /* Modern, Clean Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-image:url(https://img.freepik.com/premium-photo/high-angle-view-multi-colored-pencils-table_1048944-28619380.jpg?ga=GA1.1.2059718357.1750186908&semt=ais_hybrid&w=740);
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* Vibrant Header */
+        h1 {
+            background-color: dimgray;
+
+            color: white;
+
+            padding: 25px;
+            text-align: center;
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, white, transparent);
+        }
+
+        /* Section Headers */
+        h2 {
+            color: dimgray;
+            text-align: center;
+            margin: 40px 0 25px;
+            font-size: 1.8em;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: dimgray;
+            margin: 10px auto;
+        }
+
+        /* Category Titles */
+
+        h3 {
+            text-align: center;
+            color: dimgray;
+            font-size: 1.3em;
+            margin: 30px 0 15px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* Menu Items */
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .menu-section {
+
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 25px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px dashed #eee;
+            font-size: 1.1em;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-name {
+            color: dimgray;
+        }
+
+        .item-price {
+            color: dimgray;
+            font-weight: bold;
+        }
+
+        /* Images Grid */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px auto;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .image-grid img {
+
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-grid img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Text Content */
+        .intro-text, .delivery-text, .info-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            color: dimgray;
+
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        /* Delivery Section */
+        .delivery-section {
+            background: white;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .contact-item {
+            display: inline-block;
+            margin: 15px;
+            padding: 12px 25px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+
+            font-weight: 500;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white !important;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(18, 140, 126, 0.3);
+        }
+
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #004E89, #002D56);
+            color: dimgray;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-logo {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .contact-info {
+            font-size: 1.2em;
+            margin: 15px 0;
+
+        }
+
+        .social-links {
+            margin: 15px 0;
+        }
+
+        .social-links a {
+            color: rgba(246, 253, 254, 0.954);
+            margin: 0 15px;
+            font-size: 1.3em;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            color: hsla(0, 21%, 95%, 0.92);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            margin-top: 30px;
+
+            opacity: 0.8;
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+                padding: 20px;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            .menu-item {
+                font-size: 1em;
+            }
+            
+            .image-grid {
+                grid-template-columns: 1fr 1fr;
+
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-item {
+                display: block;
+                margin: 10px auto;
+                max-width: 250px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-
+
+awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <h1>Shop List</h1>
+    
+
+    <div class="menu-container">
+        <div class="menu-section">
+            <h2>Our collection</h2>
+            <h3>with Prices</h3>
+            
+            <div class="menu-item">
+        <span class="item-name">T-shirts</span>
+
+                <span class="item-price">20,000/=</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Jeans</span>
+                <span class="item-price">50,000/=</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Shoes</span>
+                <span class="item-price">60,000/=</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Sweaters</span>
+                <span class="item-price">30,000/=</span>
+            </div>
+
+            <div class="menu-item">
+                <span class="item-name">Shirts</span>
+                <span class="item-price">30,000/=</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Hats & Caps</span>
+                <span class="item-price">10,000/=</span>
+            </div>
+
+            <div class="menu-item">
+                <span class="item-name">Coats</span>
+                <span class="item-price">30,000/=</span>
+            </div>
+
+            <div class="menu-item">
+                <span class="item-name">Delivery in Dar es Salaam</span>
+                <span class="item-price">5,000/=</span>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="image-grid">
+                   <img src="Pic.html/shoe.jpg">
+                       <img src="Pic.html/Sweater.jpg">
+                            <img src="Pic.html/shirt.jpg">
+                                 <img src="Pic.html/vans.jpg">
+                                      <img src="Pic.html/jeans.jpg">
+                                          <img src="Pic.html/coat.jpg">
+                                              <img src="Pic.html/shirt.jpg">
+                                              <img src="Pic.html/jackets.jpg">
+    </div>
+    
+   
+    <div class="delivery-section">
+        <h2>Delivery</h2>
+        <p class="delivery-text">We make Delivery at Any Place you are even other region ,faster and Safe.</p>
+        
+        <div>
+            <span class="contact-item">
+                <i class="fas fa-phone-alt"></i> Piga: +255 777 122 393
+
+            </span>
+            <a href="#" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> Order here
+            </a>
+        </div>
+    </div>
+    
+    
+        
+
+
+</body>
+</html>
